@@ -1,0 +1,8 @@
+CREATE DATABASE IF NOT EXISTS CatCare;
+USE CatCare;
+
+CREATE TABLE Cats (
+    CatName VARCHAR(255) NOT NULL,
+    Room VARCHAR(255) NOT NULL,
+    Abnormality_noticed VARCHAR(255) NOT NULL
+);
