@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('America/Chicago');
 if (!isset($_SESSION['cats'])) {
     $_SESSION['cats'] = [
         [
@@ -72,6 +73,7 @@ if ($searchTerm !== '') {
 <body>
 <div class="container">
     <h1>Cat Care Record</h1>
+    <img src="red logo.jpg" alt="Cat Care Logo" class="logo">
     
     <?php if ($message): ?>
         <div class="message<?php echo ($message === 'Please fill in all fields.' ? ' error' : ''); ?>"><?php echo $message; ?></div>
@@ -98,7 +100,7 @@ if ($searchTerm !== '') {
     <form method="get" action="" class="search-form">
         <div>
             <label for="search">Search records</label>
-            <input type="text" id="search" name="search" placeholder="Search by name, room, or abnormality" value="<?php echo htmlspecialchars($searchTerm, ENT_QUOTES, 'UTF-8'); ?>">
+            <input type="text" id="search" name="search" placeholder="Search by name, room, abnormality, or volunteer" value="<?php echo htmlspecialchars($searchTerm, ENT_QUOTES, 'UTF-8'); ?>">
         </div>
         <button type="submit">Search</button>
     </form>
