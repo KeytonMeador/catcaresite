@@ -1,24 +1,7 @@
 <?php
 session_start();
 date_default_timezone_set('America/Chicago');
-if (!isset($_SESSION['cats'])) {
-    $_SESSION['cats'] = [
-        [
-            'CatName' => 'Whiskers',
-            'Room' => '101',
-            'Abnormality' => 'None',
-            'Volunteer' => 'Mia',
-            'CreatedAt' => '04/07/26 10:00'
-        ],
-        [
-            'CatName' => 'Luna',
-            'Room' => '202',
-            'Abnormality' => 'Sneezing',
-            'Volunteer' => 'Noah',
-            'CreatedAt' => '04/07/26 11:15'
-        ]
-    ];
-}
+
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action']) && $_POST['action'] === 'delete' && isset($_POST['index'])) {
@@ -85,7 +68,22 @@ if ($searchTerm !== '') {
         </div>
         <div>
             <label for="Room">Room</label>
-            <input type="text" id="Room" name="Room" placeholder="Enter room" required>
+            <select id="Room" name="Room" required>
+                <option value="" disabled selected>Select a room</option>
+                <option value="S1">S1</option>
+                <option value="S2">S2</option>
+                <option value="S3">S3</option>
+                <option value="S4">S4</option>
+                <option value="S5">S5</option>
+                <option value="S6">S6</option>
+                <option value="L1">L1</option>
+                <option value="L2">L2</option>
+                <option value="L3 - Staff Cleaning">L3 - Staff Cleaning</option>
+                <option value="L4">L4</option>
+                <option value="L5A/L5B">L5A/L5B</option>
+                <option value="L6">L6</option>
+                <option value="Overflow">Overflow</option>
+            </select>
         </div>
         <div>
             <label for="Abnormality">Abnormality noticed</label>
