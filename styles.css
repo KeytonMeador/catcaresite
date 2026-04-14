@@ -98,3 +98,144 @@ body.sql-page {
     top: 20px;
     right: 20px;
 }
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+}
+.page-nav {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0 30px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 15px;
+}
+.nav-link {
+    color: #2271b3;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+.nav-link:hover {
+    color: #1b5f96;
+}
+.nav-current {
+    color: #184c7b;
+    font-weight: bold;
+}
+.checklist-container {
+    display: none;
+}
+.room-form {
+    display: none;
+}
+.room-item {
+    display: none;
+}
+.room-item.cleaned {
+    display: none;
+}
+.room-checkbox {
+    display: none;
+}
+.room-checkbox:hover {
+    display: none;
+}
+.room-checkbox.checked {
+    display: none;
+}
+.room-label {
+    display: none;
+}
+.cleaning-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.cleaning-table thead {
+    background: #184c7b;
+    color: white;
+}
+.cleaning-table th {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+    font-weight: bold;
+}
+.cleaning-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+.cleaning-table .room-name {
+    text-align: left;
+    font-weight: 500;
+}
+.checkbox-wrapper {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+.checkbox-wrapper input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+}
+.checkmark {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #bbb;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: all 0.3s;
+}
+.checkbox-wrapper input[type="checkbox"]:checked ~ .checkmark {
+    background: #34a853;
+    border-color: #34a853;
+    color: white;
+}
+.checkbox-wrapper input[type="checkbox"]:checked ~ .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+.checkbox-wrapper input[type="checkbox"]:hover ~ .checkmark {
+    border-color: #2271b3;
+}
+.initials-input {
+    max-width: 80px;
+    padding: 6px 8px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+.initials-input:focus {
+    outline: none;
+    border-color: #2271b3;
+    box-shadow: 0 0 4px rgba(34, 113, 179, 0.3);
+}
+.clear-button {
+    background: #d9534f;
+    max-width: 200px;
+}
+.clear-button:hover {
+    background: #c9302c;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+}

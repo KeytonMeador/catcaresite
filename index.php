@@ -58,6 +58,11 @@ if ($searchTerm !== '') {
     <h1>Cat Care Record</h1>
     <img src="red logo.jpg" alt="Cat Care Logo" class="logo">
     
+    <nav class="page-nav">
+        <span class="nav-current">Cat Care Records</span>
+        <a href="rooms.php" class="nav-link">Room Checklist</a>
+    </nav>
+    
     <?php if ($message): ?>
         <div class="message<?php echo ($message === 'Please fill in all fields.' ? ' error' : ''); ?>"><?php echo $message; ?></div>
     <?php endif; ?>
