@@ -143,10 +143,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </label>
                         </td>
                         <td>
-                            <input type="text" name="am_initials" maxlength="3" placeholder="ex: ABC" value="<?php echo htmlspecialchars($data['am_initials'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" class="initials-input">
+                            <input type="text" name="am_initials" maxlength="3" placeholder="ex: ABC" value="<?php echo htmlspecialchars($data['am_initials'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" class="initials-input" onblur="this.form.submit();">
                         </td>
                         <td>
-                            <input type="text" name="pm_initials" maxlength="3" placeholder="ex: ABC" value="<?php echo htmlspecialchars($data['pm_initials'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" class="initials-input">
+                            <input type="text" name="pm_initials" maxlength="3" placeholder="ex: ABC" value="<?php echo htmlspecialchars($data['pm_initials'] ?? '', ENT_QUOTES, 'UTF-8'); ?>" class="initials-input" onblur="this.form.submit();">
                         </td>
                     </form>
                 </tr>
