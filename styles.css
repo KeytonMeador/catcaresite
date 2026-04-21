@@ -12,6 +12,16 @@ form {
     display: grid;
     gap: 14px;
 }
+.search-form {
+    display: flex;
+    gap: 10px;
+    align-items: end;
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
 label {
     display: block;
     font-weight: bold;
@@ -54,7 +64,7 @@ button:hover {
     background: #e7f4ea;
     color: #1c6d3d;
 }
-.error {
+.message.error {
     background: #fbeaea;
     color: #a12929;
 }
@@ -67,9 +77,6 @@ th, td {
     border: 1px solid #ddd;
     padding: 10px;
     text-align: left;
-}
-th {
-    background: #f0f5fb;
 }
 .box {
     max-width: 800px;
@@ -97,6 +104,55 @@ body.sql-page {
     position: absolute;
     top: 20px;
     right: 20px;
+}
+
+/* History section styles */
+.history-container {
+    margin-top: 30px;
+}
+
+.history-entry {
+    margin-bottom: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    background: #fafafa;
+}
+
+.history-entry h3 {
+    margin: 0 0 15px 0;
+    color: #184c7b;
+    font-size: 18px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.history-table th,
+.history-table td {
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    text-align: center;
+}
+
+.history-table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #333;
+}
+
+.history-table .room-name {
+    text-align: left;
+}
+
+.button-group {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 .container {
     max-width: 900px;
@@ -238,4 +294,12 @@ select {
     border: 1px solid #bbb;
     border-radius: 6px;
     font-size: 14px;
+}
+
+
+
+/* Ensure table header colors */
+.cleaning-table th {
+    background: #184c7b !important;
+    color: white !important;
 }

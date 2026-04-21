@@ -2,6 +2,11 @@
 session_start();
 date_default_timezone_set('America/Chicago');
 
+// Initialize cats array if it doesn't exist
+if (!isset($_SESSION['cats'])) {
+    $_SESSION['cats'] = [];
+}
+
 $message = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action']) && $_POST['action'] === 'delete' && isset($_POST['index'])) {
