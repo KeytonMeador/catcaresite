@@ -105,6 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <nav class="page-nav">
         <a href="index.php" class="nav-link">Cat Care Records</a>
         <span class="nav-current">Room Checklist</span>
+        <a href="software project/edenTrainingHomePage.html" class="nav-link">EVI Training</a>
     </nav>
     
     <?php if ($message): ?>
@@ -202,6 +203,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     <?php endif; ?>
 </div>
+<footer class="site-footer">Room Checklist &copy; Keyton Meador</footer>
 </body>
 </html>
 

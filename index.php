@@ -66,6 +66,7 @@ if ($searchTerm !== '') {
     <nav class="page-nav">
         <span class="nav-current">Cat Care Records</span>
         <a href="rooms.php" class="nav-link">Room Checklist</a>
+        <a href="software project/edenTrainingHomePage.html" class="nav-link">EVI Training</a>
     </nav>
     
     <?php if ($message): ?>
@@ -150,5 +151,6 @@ if ($searchTerm !== '') {
         </tbody>
     </table>
 </div>
+<footer class="site-footer">Cat Care Records &copy; Keyton Meador</footer>
 </body>
 </html>
